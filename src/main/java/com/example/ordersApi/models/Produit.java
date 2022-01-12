@@ -9,6 +9,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @AllArgsConstructor
@@ -32,5 +33,5 @@ public class Produit {
     @JoinColumn(name = "categorie_code")
     private Categorie categorie;
     @OneToMany(mappedBy = "produit")
-    private List<LignCommande> lignCommandes;
+    private Set<LignCommande> lignCommandes;
 }
